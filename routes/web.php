@@ -13,12 +13,12 @@
 
 use App\Article;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function() {
+    return view('coming-soon');
 });
 
-Route::get('coming-soon', function() {
-    return view('coming-soon');
+Route::get('welcome', function () {
+    return view('welcome');
 });
 
 Route::get('news/{slug}', ['as' => 'article', function($slug) {
