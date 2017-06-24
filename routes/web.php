@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('coming-soon', function() {
+    return view('coming-soon');
+});
+
 Route::get('news/{slug}', ['as' => 'article', function($slug) {
     return view('news.show', ['article' => Article::findBySlugOrFail($slug) ]);
 }]);
