@@ -16,6 +16,7 @@ class Article extends Base
      */
      public static $rules = [
      	'title' => 'required',
+         'body' => 'required',
      	'slug' => 'alpha_dash|unique:articles',
      	'images.default' => 'image|required',
     	'images.listing' => 'image',
