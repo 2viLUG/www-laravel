@@ -7,7 +7,7 @@
 
         <title>{{ Decoy::el('coming-soon.meta.title') }}</title>
 
-        <link rel="icon" href="{{ Decoy::el('general.meta.favicon')->url }}">
+        <link rel="icon" href="{{ Decoy::el('general.meta.favicon') }}">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,600" rel="stylesheet" type="text/css">
@@ -88,8 +88,7 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 @if(Decoy::el('coming-soon.body.show_image')->value())
-                    <img src="{{ Decoy::el('coming-soon.body.image')->url }}" alt="{{ Decoy::el('coming-soon.body
-                    .title') }}">
+                    <img src="{{ Decoy::el('coming-soon.body.image') }}" alt="{{ Decoy::el('coming-soon.body.title') }}">
                 @else
                     <h1 class="title m-b-sm m-t-0">{{ Decoy::el('coming-soon.body.title') }}</h1>
                 @endif

@@ -28,6 +28,7 @@ Route::get('news/{slug}', ['as' => 'article', function($slug) {
 Route::get('news', ['as' => 'news', function() {
     return view('news.index', ['articles' => Article::listing()->paginate(12) ]);
 }]);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
