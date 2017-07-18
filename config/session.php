@@ -24,8 +24,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | Here you may specify the number of minutes that you wish the session
-    | to be allowed to remain idle before it expires. If you want them
-    | to immediately expire on the browser closing, set that option.
+    | to be allowed to remain idle for it is expired. If you want them
+    | to immediately expire when the browser closes, set it to zero.
     |
     */
 
@@ -64,9 +64,9 @@ return [
     | Session Database Connection
     |--------------------------------------------------------------------------
     |
-    | When using the "database" or "redis" session drivers, you may specify a
-    | connection that should be used to manage these sessions. This should
-    | correspond to a connection in your database configuration options.
+    | When using the "database" session driver, you may specify the database
+    | connection that should be used to manage your sessions. This should
+    | correspond to a connection in your "database" configuration file.
     |
     */
 
@@ -84,19 +84,6 @@ return [
     */
 
     'table' => 'sessions',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Session Cache Store
-    |--------------------------------------------------------------------------
-    |
-    | When using the "apc" or "memcached" session drivers, you may specify a
-    | cache store that should be used for these sessions. This value must
-    | correspond with one of the application's configured cache stores.
-    |
-    */
-
-    'store' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -122,7 +109,7 @@ return [
     |
     */
 
-    'cookie' => 'laravel_session',
+    'cookie' => 'october_session',
 
     /*
     |--------------------------------------------------------------------------
@@ -148,7 +135,7 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN', null),
+    'domain' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -161,19 +148,6 @@ return [
     |
     */
 
-    'secure' => env('SESSION_SECURE_COOKIE', false),
-
-    /*
-    |--------------------------------------------------------------------------
-    | HTTP Access Only
-    |--------------------------------------------------------------------------
-    |
-    | Setting this value to true will prevent JavaScript from accessing the
-    | value of the cookie and the cookie will only be accessible through
-    | the HTTP protocol. You are free to modify this option if needed.
-    |
-    */
-
-    'http_only' => true,
+    'secure' => false,
 
 ];
